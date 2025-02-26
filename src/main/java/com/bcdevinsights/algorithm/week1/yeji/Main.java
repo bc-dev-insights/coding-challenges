@@ -1,4 +1,4 @@
-package com.bcdevinsights.algorithm.week1;
+package com.bcdevinsights.algorithm.week1.yeji;
 
 public class Main {
 
