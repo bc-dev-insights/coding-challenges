@@ -1,4 +1,4 @@
-package com.bcdevinsights.algorithm.week3;
+package com.bcdevinsights.algorithm.week3.yeji;
 
 import java.io.BufferedReader;
 import java.io.IOException;
