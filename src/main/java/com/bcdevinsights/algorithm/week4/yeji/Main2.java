@@ -32,12 +32,12 @@ public class Main2 {
         int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         boolean[] visited = new boolean[n];
         int[] output = new int[n];
-        permutation(arr, output, visited, 0, n, n);
+        permutation(arr, output, visited, 0, n);
         System.out.println(max);
 
     }
 
-    private static void permutation(int[] arr, int[] output, boolean[] visited, int i, int n, int n1) {
+    private static void permutation(int[] arr, int[] output, boolean[] visited, int i, int n) {
         if(i == n){
             int sum = 0;
             for(int j=0;j<n-1;j++){
@@ -51,7 +51,7 @@ public class Main2 {
             if(!visited[j]){
                 visited[j] = true;
                 output[i] = arr[j];
-                permutation(arr, output, visited, i+1, n, n1);
+                permutation(arr, output, visited, i+1, n);
                 visited[j] = false;
             }
         }

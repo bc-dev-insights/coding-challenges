@@ -22,17 +22,20 @@ import java.util.List;
  */
 public class Main4 {
 
+    public static int[] result = new int[7];
+
     // 2 명을 뺸 합이 100이 나오는지
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         List<String> nanjang = new ArrayList<>();
         String line;
 
-        while ((line = br.readLine()) != null) {
-           nanjang.add(line);
+        for(int i=0; i<9; i++){
+            line = br.readLine();
+            nanjang.add(line);
         }
-        
         combination(nanjang, new boolean[nanjang.size()], 0, 0, new int[7]);
+        Arrays.stream(result).sorted().forEach(System.out::println);
     }
 
     /**
@@ -51,7 +54,7 @@ public class Main4 {
                 sum += ints[j];
             }
             if(sum == 100){
-                Arrays.stream(ints).sorted().forEach(System.out::println);
+                System.arraycopy(ints, 0, result, 0, 7);
             }
             return;
         }
